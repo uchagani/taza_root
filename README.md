@@ -1,8 +1,6 @@
 # TazaRoot
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/taza_root`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem allows taza (https://github.com/hammernight/taza) users to set a project root for their page objects.
 
 ## Installation
 
@@ -14,7 +12,7 @@ gem 'taza_root'
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
@@ -22,7 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Add the following to your ```spec_helper.rb``` or ```env.rb``` or any other starting point for your test:
+
+```ruby
+Taza.configure do |config|
+  config.project_root = 'path/to/the/root/you/want'
+end
+```
 
 ## Development
 
@@ -32,7 +36,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/taza_root.
+Bug reports and pull requests are welcome on GitHub at https://github.com/uchagani/taza_root.
 
 
 ## License
